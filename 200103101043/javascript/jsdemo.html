@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Demo</title>
+    <style>
+        body{
+            background-color: rgb(0, 255, 229);
+        }
+        div{
+            height: 300px;
+            width: 300px;
+            background-color: rgb(255, 0, 0);
+        }
+    </style>
+    <script>
+        function internalAlert(){
+            alert('Please Check The Details.');
+        }
+        function internalConfirm(){
+            if(confirm('Please Check The Details.'))
+            {
+                alert('Submmited Succesfully.');
+            }
+            else{
+                alert('Not Submmited')
+            }
+        }
+        function internalPrompt(){
+            var fn = prompt('Enter First Name: ');
+            var ln = prompt('Enter last Name: ');
+            alert(fn+" "+ln );
+        }
+        function bodyBGColor(){
+            document.body.style.backgroundZColor="#b840ae";
+        }
+        function divBGColor(){
+            document.getElementById("div").style.backgroundColor="#73faa7";
+        }
+        function bodyBGDynamic(){
+            document.body.style.backgroundColor=prompt("Enter Color Name Here....");
+        }
+        function divBGDynamic(){
+            document.getElementById("div").style.backgroundColor=prompt("Enter Color Name Here....");
+        }
+        function bodyBGCP1(){
+            document.body.style.backgroundColor=document.getElementById("CP1").value;
+        }
+        function divBGCP2(){
+            document.getElementById("div").style.backgroundColor=document.getElementById("CP2").value;
+        }
+    </script>
+    <script src="externalscript.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="div">This is Div Tag.</div>
+    <hr> 
+    <input type="button" value="Alert Buttons" onclick="alert('Please Check The Details.')" style="cursor: pointer; background-color: rgb(255, 204, 0); ">
+    <input type="button" value="Confirm Button" onclick="confirm('Please Confirm Your Details.')" style="cursor: pointer;background-color: rgb(255, 204, 0);">
+    <input type="button" value="Prompt Button" onclick="prompt('Enter The Password.')" style="cursor: pointer;background-color: rgb(255, 204, 0);">
+    <hr>
+    <input type="button" value="Internal Alert Buttons" onclick="internalAlert()" style="cursor: pointer; background-color: rgb(255, 204, 0); ">
+    <input type="button" value="Internal Confirm Button" onclick="internalConfirm()" style="cursor: pointer;background-color: rgb(255, 204, 0);">
+    <input type="button" value="Internal Prompt Button" onclick="internalPrompt()" style="cursor: pointer;background-color: rgb(255, 204, 0);">
+    <hr>
+    <input type="button" value="External Alert Buttons" onclick="ExternalAlert()" style="cursor: pointer; background-color: rgb(255, 204, 0); ">
+    <input type="button" value="External Confirm Button" onclick="ExternalConfirm()" style="cursor: pointer;background-color: rgb(255, 204, 0);">
+    <input type="button" value="External Prompt Button" onclick="ExternalPrompt()" style="cursor: pointer;background-color: rgb(255, 204, 0);">
+    <hr>
+    <input type="button" value="Body Bg Color" onclick="bodyBGColor()" style="cursor: pointer;background-color: rgb(255, 204, 0);">
+    <input type="button" value="Div Bg Color" onclick="divBGColor()" style="cursor: pointer;background-color: rgb(255, 204, 0);">
+    <hr/>
+    <input type="button" value="Body Bg Prompt" onclick="bodyBGDynamic()" style="cursor: pointer;background-color: rgb(255, 204, 0);">
+    <input type="button" value="Div Bg Prompt" onclick="divBGDynamic()" style="cursor: pointer;background-color: rgb(255, 204, 0);">
+    <hr/>
+    <input type="color" id="CP1" onchange="bodyBGCP1()" style="cursor: pointer;background-color: rgb(255, 204, 0);">
+    <input type="color" id="CP2" onchange="divBGCP2()" style="cursor: pointer;background-color: rgb(255, 204, 0);">
+
+</body>
+</html>
